@@ -1,0 +1,973 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+/* Main container */
+.account-container {
+  /* display: flex; */
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: #003050;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+/* Back arrow for Create Account */
+.back-arrow-create {
+  position: absolute;
+  top: -84px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Back arrow for Join As */
+.back-arrow-joinas {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Back arrow for Profile Form */
+.back-arrow-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* --- Create Account Form Section --- */
+.form-section {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #003050;
+  color: white;
+  position: relative;
+}
+
+.header-top {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.1rem;
+  justify-content: center;
+  width: 94%;
+}
+
+.input-row input {
+  width: 250px;
+  padding: 0.75rem;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  margin-left: 33px;
+  background-color: #bcd2e8;
+}
+
+.full-width {
+  padding: 0.8rem;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  margin-left: 115px;
+  border: none;
+  border-radius: 8px;
+  width: 535px;
+  background-color: #bcd2e8;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 535px;
+  padding-right: 2.5rem;
+  margin-left: 115px;
+  margin-bottom: 1.5rem;
+  background-color: #bcd2e8;
+}
+
+.toggle-visibility {
+  position: absolute;
+  right: 4rem;
+  top: 22%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 10;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  margin-left: 115px;
+}
+
+.login-link {
+  font-size: 0.95rem;
+  margin-left: 115px;
+  margin-bottom: 20px;
+}
+.login-link span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.login-link-text {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.login-link-text:hover {
+  text-decoration: underline;
+}
+
+.join-btn {
+  width: 30%;
+  padding: 0.73rem;
+  background-color: #2e5984;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 265px;
+}
+
+.join-btn:hover {
+  background-color: #5ba9ba;
+}
+
+.img-section {
+  flex: 4;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.img-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --- Join As Section --- */
+.joinas-content {
+  text-align: center;
+}
+
+.joinas-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.profile-picture-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.profile-preview {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  border: 2px solid #ccc;
+}
+.profile-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+.profile-upload-input {
+  font-size: 0.9rem;
+}
+
+.joinas-card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.joinas-card {
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 5.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 400px;
+}
+
+.joinas-card:hover {
+  background-color: #bcd2e8;
+}
+
+.joinas-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.joinas-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 30px;
+  margin-left: -30px;
+}
+
+.joinas-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.joinas-arrow {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 30px;
+}
+
+/* --- Profile Form Section --- */
+.form-container {
+  height: 100vh;
+  background-color: #003050;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+}
+
+.profile-image img {
+  width: 160px;
+  height: 155px;
+  margin-bottom: 40px;
+  padding: 10px;
+  background-color: #ffffffd2;
+  border-radius: 10px;
+}
+
+.frm-input {
+  width: 400px;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #bcd2e8;
+  color: #000;
+}
+
+.next-button {
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2e5984;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+
+.next-button:hover {
+  background-color: #79b8c9;
+}
+
+/* --- About Yourself Section --- */
+
+.about-container {
+  background-color: #003050;
+  height: 100vh;
+  width: 100vw;
+  padding: 3rem;
+  font-family: "Inter", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  box-sizing: border-box;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.form-textarea,
+.form-textarea1 {
+  width: 100%;
+  height: 120px;
+  background-color: #bcd2e8;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  resize: none;
+  color: #000;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.form-textarea1 {
+  height: 160px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 60rem;
+  margin-top: 1rem;
+}
+
+.bck-button,
+.nxt-button {
+  width: 160px;
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2e5984;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+
+.bck-button:hover,
+.nxt-button:hover {
+  background-color: #2e5984;
+}
+
+/* --- Birth Date Form Section --- */
+.birth-container {
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  background-color: #003050;
+  color: white;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.birth-header {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 13px;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.birth-description {
+  max-width: 1000px;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-weight: lighter;
+  padding-left: 1rem;
+}
+
+.input-wrapper {
+  width: 200%;
+  max-width: 400px;
+  position: relative;
+  align-self: flex-start;
+  margin-top: 2rem;
+  padding-left: 1rem;
+}
+
+.birth-input {
+  width: 25rem;
+  height: 50px;
+  padding: 0 1rem;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: #bcd2e8;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.button-rows {
+  display: flex;
+  justify-content: center;
+  gap: 59rem;
+  margin-top: 11rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.bck-btton,
+.nxt-btton {
+  width: 160px;
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2e5984;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-back:hover,
+.btn-next:hover {
+  opacity: 0.9;
+  background-color: #5a99a3;
+}
+
+@media (max-width: 768px) {
+  .birth-header {
+    font-size: 24px;
+  }
+
+  .birth-description {
+    font-size: 16px;
+  }
+
+  .input-wrapper {
+    width: 90%;
+    max-width: 100%;
+  }
+  .bck-button,
+  .nxt-button {
+    width: 90%;
+    margin: 0;
+  }
+}
+
+/* --- Skills Selector Section --- */
+.skills-container {
+  background-color: #003050;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+}
+
+.category-box-container {
+  margin-bottom: 4rem;
+}
+
+.category-box {
+  background-color: rgba(247, 247, 247, 0.637);
+  border-radius: 10px;
+  padding: 3rem 3rem 3rem;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.category-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  position: relative;
+  top: -35px;
+  font-weight: bold;
+  margin-left: -20px;
+}
+
+.category-items-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-item {
+  background-color: white;
+  border-radius: 8px;
+  width: 120px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease;
+  padding: 6px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0.3rem;
+  display: left;
+  align-items: left;
+  justify-content: left;
+}
+
+.icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.label {
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0 2px;
+  line-height: 1;
+}
+
+.category-item.selected {
+  border: 2px solid #003050;
+}
+
+.selected-skills-box {
+  background-color: rgba(255, 255, 255, 0.685);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.skills-selected-count {
+  color: rgb(0, 0, 0);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.selected-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selected-skill-pill {
+  background-color: rgba(255, 255, 255, 0.295);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: black;
+}
+
+.remove-skill {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.2s;
+}
+
+.remove-skill:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.add-skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  width: 40px;
+  height: 40px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0rem;
+}
+
+.btn-back,
+.btn-next {
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 20%;
+  margin-right: 25px;
+  margin-left: 25px;
+  background-color: #5b9bbd;
+  color: #ffff;
+  height: 50px;
+}
+
+.submenu {
+  position: absolute;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 120px;
+  z-index: 10;
+}
+
+.submenu-above {
+  bottom: 90%;
+  top: auto;
+  left: 100%;
+  transform: translateX(-50%);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.submenu-item {
+  padding: 0.6rem 1rem;
+  color: #333;
+  text-align: left;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submenu-item:hover {
+  background-color: #f0f0f0;
+}
+
+.submenu-item.selected-item {
+  background-color: #e6f7e6;
+  color: #003050;
+}
+
+@media (max-width: 768px) {
+  .category-item {
+    width: calc(40% - 8px);
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .back-button,
+  .next-button {
+    width: 100%;
+  }
+}
+
+/* --- Add Experience Form Section --- */
+.experience-container {
+  background-color: #003050;
+  padding: 2rem;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.experience-header {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  display: sticky;
+}
+
+.experience-subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.experience-header-block {
+  margin-bottom: 1rem;
+}
+
+.experience-scrollable {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 60vh;
+  padding-right: 10px;
+  color: #1e3f66;
+}
+
+.experience-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.experience-row input[type="text"] {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.date-wrapper {
+  position: relative;
+  margin-top: 0;
+}
+
+.date-wrapper input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333;
+  width: 100%;
+}
+
+.date-wrapper {
+  position: relative;
+}
+
+.date-wrapper input {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333;
+  width: 100%;
+}
+
+.date-wrapper img {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+.date-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.remove-button {
+  color: #ff6666;
+  font-weight: 500;
+  margin: 4px 0 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.minus-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.add-more {
+  color: #00cc44;
+  font-weight: 500;
+  margin: 16px 0 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.plus-icon {
+  font-size: 18px;
+}
+
+.buttons {
+  display: flex;
+  gap: -10px;
+  margin-top: 30px;
+}
+
+.bck-btton,
+.nxt-btton {
+  background-color: #5b9bbd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20%;
+  height: 50px;
+}
+
+.back-button:hover,
+.next-button:hover {
+  background-color: #5aa3b6;
+}
+
+@media (max-width: 768px) {
+  .experience-row {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .back-button,
+  .next-button {
+    width: 100%;
+  }
+}
+
+/*skills sphere*/
+.skill-sphere-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #003050; /* Deep blue background */
+  color: white;
+}
+
+.left-picture {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.left-picture img {
+  width: 62vh;
+  height: 100vh;
+  object-fit: cover;
+  margin-left: 10px; /* tweak if needed */
+}
+
+.right-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* align left */
+  padding: 4rem;
+  color: white;
+}
+
+.right-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.right-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.nxt-bttn {
+  background-color: #528aae;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nxt-bttn:hover {
+  background-color: #4b92af;
+}
+
+category-scroll-wrapper {
+  display:flex;
+  justify-content: center;
+  gap:10px;
+}
+
